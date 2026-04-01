@@ -187,10 +187,9 @@ Analytics includes:
 <img width="1920" height="4692" alt="screencapture-profound-duckanoo-b387bd-netlify-app-landing-2026-04-01-13_02_17" src="https://github.com/user-attachments/assets/bdaf33c6-d848-41a4-935b-0d813c03fbbd" />
 
 ---
-
-
 ## 📊 Investor Dashboard (`/dashboard`)
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard]<img width="1920" height="1692" alt="screencapture-profound-duckanoo-b387bd-netlify-app-dashboard-2026-04-01-13_03_20" src="https://github.com/user-attachments/assets/2aeeb134-0538-4f47-94e8-1667fbd4d907" />
+]()
 
 ---
 
