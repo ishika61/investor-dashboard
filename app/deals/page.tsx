@@ -50,7 +50,7 @@ function useDebounce<T>(value: T, delay = 300): T {
 
 // ─── DEAL CARD ────────────────────────────────────────────────────
 function DealCard({ d, saved, onSave, index }: { d: typeof ALL_DEALS[0]; saved: boolean; onSave: () => void; index: number }) {
-  const RiskIcon = RISK_ICONS[d.risk];
+const RiskIcon = RISK_ICONS[d.risk] || CheckCircle;
   const color = RISK_COLORS[d.risk];
   const roiColor = d.roi >= 30 ? "#22C55E" : d.roi >= 15 ? "#F59E0B" : "#EF4444";
 
@@ -78,7 +78,7 @@ function DealCard({ d, saved, onSave, index }: { d: typeof ALL_DEALS[0]; saved: 
           <div className="flex items-center gap-1.5">
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold"
               style={{ background: `${color}14`, color, border: `1px solid ${color}2a` }}>
-              <RiskIcon size={9} />{d.risk}
+     {RiskIcon && <RiskIcon size={9} />}
             </span>
             <button onClick={onSave}
               className="w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
