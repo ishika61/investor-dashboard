@@ -1,5 +1,10 @@
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+
+
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Shield, Zap, BarChart2, ChevronRight, Star, Globe, Lock } from "lucide-react";
 
@@ -31,6 +36,7 @@ const TESTIMONIALS = [
 ];
 
 export default function LandingPage() {
+  const router = useRouter();
   return (
     <div className="min-h-screen overflow-x-hidden" style={{ background: "#080C14", fontFamily: "'Sora', sans-serif" }}>
       <style>{`
@@ -77,9 +83,20 @@ export default function LandingPage() {
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/50">
-          {["Dashboard", "Deals", "Portfolio", "Corporate"].map(item => (
-            <a key={item} href="#" className="hover:text-white/90 transition-colors duration-200">{item}</a>
-          ))}
+       {[
+  { name: "Dashboard", path: "/dashboard" },
+  { name: "Deals", path: "/deals" },
+  { name: "Portfolio", path: "/investments" },
+  { name: "Corporate", path: "/corporate" },
+].map(item => (
+  <Link
+    key={item.name}
+    href={item.path}
+    className="hover:text-white/90 transition-colors duration-200"
+  >
+    {item.name}
+  </Link>
+))}
         </div>
 
         <div className="flex items-center gap-3">
@@ -118,14 +135,21 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="flex items-center gap-2 text-base font-bold text-white px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-2xl"
-                style={{ background: "linear-gradient(135deg,#6366F1,#06B6D4)", boxShadow: "0 8px 32px rgba(99,102,241,0.45)" }}>
-                Explore Deals <ArrowRight size={16} />
-              </button>
-              <button className="flex items-center gap-2 text-base font-semibold text-white/60 hover:text-white/90 px-8 py-4 rounded-2xl transition-all duration-200"
-                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                View Dashboard <ChevronRight size={16} />
-              </button>
+              <button
+  onClick={() => router.push("/deals")}
+  className="flex items-center gap-2 text-base font-bold text-white px-8 py-4 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-2xl"
+  style={{ background: "linear-gradient(135deg,#6366F1,#06B6D4)", boxShadow: "0 8px 32px rgba(99,102,241,0.45)" }}
+>
+  Explore Deals <ArrowRight size={16} />
+</button>
+
+<button
+  onClick={() => router.push("/dashboard")}
+  className="flex items-center gap-2 text-base font-semibold text-white/60 hover:text-white/90 px-8 py-4 rounded-2xl transition-all duration-200"
+  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
+>
+  View Dashboard <ChevronRight size={16} />
+</button>
             </motion.div>
           </motion.div>
 

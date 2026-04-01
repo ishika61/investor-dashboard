@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -9,7 +9,7 @@ import {
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
-  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.4, delay: i * 0.04, ease: "easeOut"} }),
+  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.4, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] } }),
 };
 
 // ─── GENERATE LARGE DATASET ──────────────────────────────────────
@@ -50,14 +50,16 @@ function useDebounce<T>(value: T, delay = 300): T {
 
 // ─── DEAL CARD ────────────────────────────────────────────────────
 function DealCard({ d, saved, onSave, index }: { d: typeof ALL_DEALS[0]; saved: boolean; onSave: () => void; index: number }) {
+  const router = useRouter();
 const RiskIcon = RISK_ICONS[d.risk] || CheckCircle;
   const color = RISK_COLORS[d.risk];
   const roiColor = d.roi >= 30 ? "#22C55E" : d.roi >= 15 ? "#F59E0B" : "#EF4444";
 
   return (
-    <motion.div variants={fadeUp} custom={index}
-      whileHover={{ y: -6, scale: 1.015 }}
-      className="relative rounded-2xl p-5 overflow-hidden group cursor-pointer"
+ <motion.div
+ onClick={() => router.push(`/deals/${d.id}`)}
+  whileHover={{ y: -6, scale: 1.015 }}
+  className="relative rounded-2xl p-5 overflow-hidden group cursor-pointer"
       style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", transition: "all 0.3s cubic-bezier(0.22,1,0.36,1)" }}>
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{ background: "linear-gradient(135deg,rgba(99,102,241,0.06),rgba(6,182,212,0.03))" }} />
@@ -78,9 +80,13 @@ const RiskIcon = RISK_ICONS[d.risk] || CheckCircle;
           <div className="flex items-center gap-1.5">
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold"
               style={{ background: `${color}14`, color, border: `1px solid ${color}2a` }}>
-     {RiskIcon && <RiskIcon size={9} />}
+              <RiskIcon size={9} />{d.risk}
             </span>
-            <button onClick={onSave}
+            <button
+                 onClick={(e)=>{
+                  e.stopPropagation();
+                  onSave();
+                 }}
               className="w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
               style={{ background: saved ? "rgba(99,102,241,0.2)" : "rgba(255,255,255,0.05)", border: `1px solid ${saved ? "rgba(99,102,241,0.4)" : "rgba(255,255,255,0.1)"}` }}>
               {saved ? <BookmarkCheck size={12} className="text-indigo-400" /> : <Bookmark size={12} className="text-white/40" />}
@@ -207,7 +213,8 @@ export default function DealExplorer() {
 
         {/* SEARCH + CONTROLS */}
         <motion.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="flex flex-col md:flex-row gap-3 mb-5">
-          {/* Search */}
+       
+        {/* Search */}
           <div className="relative flex-1">
             <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30" />
             <input value={query} onChange={e => setQuery(e.target.value)}
@@ -256,7 +263,7 @@ export default function DealExplorer() {
         <AnimatePresence>
           {showFilters && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}
+              exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden mb-5">
               <div className="rounded-2xl p-5 grid grid-cols-1 md:grid-cols-4 gap-5"
                 style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)" }}>
