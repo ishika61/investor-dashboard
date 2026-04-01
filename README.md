@@ -177,8 +177,7 @@ Analytics includes:
 ---
 
 ## 🌐 Live Demo
-👉 https://profound-duckanoo-b387bd.netlify.app
-
+👉https://profound-duckanoo-b387bd.netlify.app/landing
 > ⚠️ Note: Deployed on Netlify due to temporary Vercel server issue. Fully compatible with Vercel.
 
 ---
@@ -229,7 +228,6 @@ Analytics includes:
 ## 🎥 Demo Video
 
 https://drive.google.com/file/d/1Mkh6ioO0hgvJp-pWAigZOQXeWvlgCIgb/view?usp=drivesdk
-
 
 
 
