@@ -187,40 +187,42 @@ Analytics includes:
 <img width="1920" height="4692" alt="screencapture-profound-duckanoo-b387bd-netlify-app-landing-2026-04-01-13_02_17" src="https://github.com/user-attachments/assets/bdaf33c6-d848-41a4-935b-0d813c03fbbd" />
 
 ---
-## 📊 Investor Dashboard (`/dashboard`)
-![Dashboard]<img width="1920" height="1692" alt="screencapture-profound-duckanoo-b387bd-netlify-app-dashboard-2026-04-01-13_03_20" src="https://github.com/user-attachments/assets/2aeeb134-0538-4f47-94e8-1667fbd4d907" />
-]()
+## 📊 Investor Dashboard 
+<img width="1920" height="1692" alt="screencapture-profound-duckanoo-b387bd-netlify-app-dashboard-2026-04-01-13_03_20" src="https://github.com/user-attachments/assets/caeb155d-9cb6-4f31-86d8-51fa61861593" />
 
 ---
 
-## 🏢 Corporate Dashboard (`/corporate`)
-![Corporate](./screenshots/corporate.png)
+## 🏢 Corporate Dashboard
+
+<img width="1920" height="2419" alt="screencapture-profound-duckanoo-b387bd-netlify-app-corporate-2026-04-01-13_06_07" src="https://github.com/user-attachments/assets/e056c07a-f3e1-4194-b249-ba4ae3e18129" />
 
 ---
 
-## 🔍 Deal Explorer (`/deals`)
-![Deals](./screenshots/deals.png)
+## 🔍 Deal Explorer
+
+<img width="1920" height="1594" alt="screencapture-profound-duckanoo-b387bd-netlify-app-deals-2026-04-01-13_07_03" src="https://github.com/user-attachments/assets/1f6a6940-7fb9-4299-b0f3-57aaa56fd483" />
 
 ---
 
 ## 🎯 Filtered Deals (Search + Filters)
-![Filtered Deals](./screenshots/deals-filter.png)
+<img width="1920" height="1903" alt="screencapture-profound-duckanoo-b387bd-netlify-app-deals2-2026-04-01-13_09_05" src="https://github.com/user-attachments/assets/77a61da4-d437-4659-9826-37c7d5dafddc" />
 
 ---
 
 ## 📄 Deal Details Page
-![Deal Details](./screenshots/deal-details.png)
+<img width="1920" height="1935" alt="screencapture-profound-duckanoo-b387bd-netlify-app-deals-1-2026-04-01-13_12_39" src="https://github.com/user-attachments/assets/08b7c8ee-5157-4ace-9569-d7fd47bf7275" />
+
 
 ---
 
-## 💼 My Investments (`/portfolio`)
-![Portfolio](./screenshots/portfolio.png)
+## 💼 My Investments 
+<img width="1920" height="1303" alt="screencapture-profound-duckanoo-b387bd-netlify-app-investments-2026-04-01-13_05_26" src="https://github.com/user-attachments/assets/2d238c80-abec-413c-bfcc-7ffb07da6b9b" />
 
 ---
+
 
 ## 📱 Responsive View (Mobile)
-![Responsive](./screenshots/mobile.png)
-
+<img width="772" height="442" alt="Screenshot 2026-04-01 132154" src="https://github.com/user-attachments/assets/035d3224-ff0e-4ffa-9a64-805f0edec72e" />
 
 
 ---
