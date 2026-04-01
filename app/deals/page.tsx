@@ -9,7 +9,7 @@ import {
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
-  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.4, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] } }),
+  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.4, delay: i * 0.04, ease: "easeOut"} }),
 };
 
 // ─── GENERATE LARGE DATASET ──────────────────────────────────────
@@ -256,7 +256,7 @@ export default function DealExplorer() {
         <AnimatePresence>
           {showFilters && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}
               className="overflow-hidden mb-5">
               <div className="rounded-2xl p-5 grid grid-cols-1 md:grid-cols-4 gap-5"
                 style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)" }}>
