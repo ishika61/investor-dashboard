@@ -1,111 +1,79 @@
+
 # 🚀 Investor & Corporate Dashboard (Next.js Assignment)
 
-A highly interactive and data-rich **fintech dashboard** built using **Next.js (App Router)**, designed to simulate real-world investor and corporate analytics **without using any backend APIs**.
-
-This project demonstrates **frontend architecture, data simulation, advanced UI/UX, performance optimization, and scalable design** as required in the assignment.
-
----
-
-# 🎯 Objective
-
-To build a fully functional investor and corporate dashboard that:
-
-* Simulates backend behavior using frontend logic
-* Handles large datasets efficiently
-* Demonstrates clean architecture and scalable design
-* Provides modern fintech UI/UX experience
+## 📌 Overview
+A highly interactive and data-rich **fintech dashboard** built using **Next.js (App Router)** that simulates real-world investor and corporate analytics without any backend APIs.
+This project demonstrates **frontend architecture, data simulation, advanced UI/UX, and performance optimization** aligned with real industry standards.
 
 ---
+## 🎯 Key Features
+### 🧠 Data Simulation Layer
 
-# 📊 Core Requirements Implementation
+* 50–100 mock deals
+* 10–20 investors
+* Stored locally (JSON / JS files)
+* Fully frontend-driven data system
 
-## 1. ✅ Data Layer
+---
+### ⚙️ Service Layer (API Simulation)
+* Custom service files (`dealService`, `investorService`)
+* Simulated API calls using Promises
+* Artificial delay (300–800ms)
+* Supports:
+  * Filtering
+  * Sorting
+  * Pagination
+  * Error simulation
 
-* Mock datasets created:
-
-  * **60+ deals**
-  * **10+ investors**
-* Stored in:
-
-```bash
-/data/deals.json
-/data/investors.json
+---
+### 🏗️ Architecture
+The project follows a **feature-based scalable architecture**:
+```
+app/
+components/
+services/
+hooks/
+utils/
+store/
 ```
 
----
-
-## 2. ✅ Service Layer (API Simulation)
-
-Service files:
-
-```bash
-/services/dealService.js
-/services/investorService.js
-```
-
-Features:
-
-* Promise-based API simulation
-* Artificial delay (**300–800ms**) using `setTimeout`
-* Filtering (industry, risk, ROI)
-* Sorting (ROI, investment)
-* Pagination support
-* Random error simulation
+* Separation of concerns (UI vs logic)
+* Reusable and modular components
+* Clean and maintainable codebase
+* No business logic inside UI components
 
 ---
-
-## 3. ✅ Architecture (Separation of Concerns)
-
-```bash
-/components   → Reusable UI components
-/services     → API simulation logic
-/hooks        → Custom hooks (debounce)
-/utils        → Helper logic (recommendation, storage)
-/store        → Redux Toolkit state management
-/data         → Mock datasets
-/app          → Pages (Next.js App Router)
-```
-
-✔ No business logic inside UI components
-
----
-
-## 4. 📈 Investor Dashboard
-
-* Summary Cards:
-
+### 📊 Investor Dashboard
+Includes:
+* Summary KPIs:
   * Total Investments
   * Active Deals
   * ROI Overview
   * Risk Distribution
 
-* Charts:
-
+* Data Visualizations:
   * Investment growth (Line chart)
   * Industry distribution (Pie chart)
-  * Risk vs ROI (Scatter chart)
+  * Risk vs ROI analysis
 
 ---
 
-## 5. 🔍 Deal Explorer
-
-* Debounced search (custom hook)
-* Multi-filter:
-
-  * Industry
-  * Risk
-  * ROI range
-* Sorting:
-
+### 🔍 Deal Explorer
+Advanced features:
+* 🔎 Debounced search
+* 🎯 Multi-filter:
   * ROI
-  * Investment size
-* Pagination (optimized for large datasets)
+  * Risk
+  * Industry
+  * Investment range
+* ↕ Sorting
+* 📄 Pagination
+* Optimized for large datasets
 
 ---
 
-## 6. 📄 Deal Details Page
-
-* Company information
+### 📄 Deal Details Page
+* Company overview
 * Financial metrics
 * ROI projections (charts)
 * Risk analysis
@@ -116,174 +84,167 @@ Features:
 
 ---
 
-## 7. 🤖 Recommendation Engine
+### 🤖 Recommendation Engine
+Frontend-based scoring system:
 
-Custom scoring algorithm:
-
+* Risk match
 * Industry match
-* Risk tolerance
 * Budget compatibility
 * ROI attractiveness
 
-Features:
-
-* Deals sorted by score
-* Optimized using `useMemo`
+➡️ Deals ranked using computed score
+➡️ Optimized using memoization
 
 ---
 
-## 8. 💼 My Investments
-
-* Save user-selected deals
-* Data persistence using `localStorage`
-
----
-
-## 9. 🏢 Corporate Dashboard
-
-* Analytics:
-
-  * Total funding raised
-  * Investor growth
-  * Conversion rate
-* Visual trend charts
+### 💼 My Investments
+* Track user-selected deals
+* Managed using state
+* Optional persistence via `localStorage`
 
 ---
 
-## 10. 📊 Data Visualization
+### 🏢 Corporate Dashboard
 
-* Library used: **Recharts**
-* Charts included:
+Analytics includes:
 
-  * Line chart
-  * Bar chart
-  * Pie chart
-  * Scatter chart
-* Smooth animations and tooltips
+* Total funding raised
+* Investor count
+* Conversion metrics
+* Trend-based visualizations
 
 ---
 
-## 11. 🧠 State Management
+### 📈 Data Visualization
 
+* Built using chart libraries (Recharts / Chart.js)
+* Includes:
+
+  * Line charts
+  * Bar charts
+  * Pie charts
+* Smooth animations & tooltips
+
+---
+
+## 🔄 Data Flow Design
+1. Mock data is stored locally
+2. Service layer simulates API behavior
+3. Components fetch data via services
+4. Redux Toolkit manages global state
+5. UI updates dynamically based on state changes
+
+---
+
+## ⚡ Optimization Strategies
+* ✅ Memoization (`useMemo`, `useCallback`)
+* ✅ Debounced search for performance
+* ✅ Lazy loading of components
+* ✅ Efficient filtering & sorting
+* ✅ Reduced unnecessary re-renders
+* ✅ Optimized animations (Framer Motion)
+
+---
+
+## 🧠 State Management
 * Implemented using **Redux Toolkit**
 * Handles:
-
   * Loading states
   * Error states
   * Data caching
-  * Async data fetching (`createAsyncThunk`)
+  * UI state management
 
 ---
 
-## 12. ⚡ Performance Optimization
-
-* Debounced search (custom hook)
-* Memoization:
-
-  * `useMemo`
-  * `useCallback`
-* Pagination for large datasets
-* Simulated async API behavior
-* Clean re-render control
-
----
-
-## 13. 🎨 UI/UX Design
-
+## 🎨 UI/UX Highlights
 * Modern fintech dashboard design
-* Clean layout with proper spacing
-* Consistent typography and color system
-* Dark theme
-* Micro-interactions and animations (Framer Motion)
-* Glassmorphism + gradient aesthetics
+* Clean layout & spacing
+* Consistent typography & color system
+* Smooth micro-interactions
+* Fully responsive design
+* Dark theme support
 
 ---
 
-# ⚙️ Tech Stack
-
-* **Next.js (App Router)**
-* **Redux Toolkit**
-* **Tailwind CSS**
-* **Recharts**
-* **Framer Motion**
-
----
-
-# 🔄 Data Flow Design
-
-```bash
-UI Components
-   ↓
-Redux Store (State Management)
-   ↓
-Service Layer (API Simulation)
-   ↓
-JSON Data (Mock Database)
-   ↓
-Redux Store
-   ↓
-UI Update
-```
+## 🛠️ Tech Stack
+* Next.js (App Router)
+* React.js
+* Redux Toolkit
+* Tailwind CSS
+* Framer Motion
+* Chart Library (Recharts / Chart.js)
 
 ---
 
-# 📁 Folder Structure
+## 🌐 Live Demo
+👉 https://profound-duckanoo-b387bd.netlify.app
 
-```bash
-/app
-/components
-/services
-/hooks
-/utils
-/store
-/data
-```
+> ⚠️ Note: Deployed on Netlify due to temporary Vercel server issue. Fully compatible with Vercel.
+
+---
+## 📸 Screenshots
+## 🏠 Landing Page (`/`)
+![Landing](./screenshots/landing.png)
 
 ---
 
-# 🌐 Deployment
-
-Live Demo: *(Add your Vercel link here)*
-
----
-
-# 📸 Screenshots
-
-(Add screenshots of all major pages here)
+## 📊 Investor Dashboard (`/dashboard`)
+![Dashboard](./screenshots/dashboard.png)
 
 ---
 
-# 🛠 Installation
-
-```bash
-git clone https://github.com/ishika61/investor-dashboard.git
-cd investor-dashboard
-npm install
-npm run dev
-```
+## 🏢 Corporate Dashboard (`/corporate`)
+![Corporate](./screenshots/corporate.png)
 
 ---
 
-# 📦 Submission Checklist
-
-* ✅ GitHub Repository
-* ✅ README (Architecture + Data Flow + Optimization)
-* ⏳ Vercel Deployment
-* ⏳ Screenshots / Screen Recording
+## 🔍 Deal Explorer (`/deals`)
+![Deals](./screenshots/deals.png)
 
 ---
 
-# 👩‍💻 Author
-
-**Ishika Savita**
+## 🎯 Filtered Deals (Search + Filters)
+![Filtered Deals](./screenshots/deals-filter.png)
 
 ---
 
-# 🏁 Conclusion
+## 📄 Deal Details Page
+![Deal Details](./screenshots/deal-details.png)
 
-This project successfully fulfills all assignment requirements by combining:
+---
 
-* Strong frontend architecture
-* Realistic data simulation
-* High-performance UI
-* Scalable and maintainable code design
+## 💼 My Investments (`/portfolio`)
+![Portfolio](./screenshots/portfolio.png)
+
+---
+
+## 📱 Responsive View (Mobile)
+![Responsive](./screenshots/mobile.png)
+
+
+
+---
+
+## 🎥 Demo Video
+
+(Add screen recording link here)
+
+---
+
+## 📂 GitHub Repository
+👉 https://github.com/ishika61/investor-dashboard
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates strong capabilities in:
+
+* Frontend architecture design
+* Data simulation without backend
+* Performance optimization
+* Scalable UI development
+
+It reflects real-world fintech dashboard design and development practices.
+
+---
