@@ -228,7 +228,7 @@ Analytics includes:
 ---
 ## 🎥 Demo Video
 
-https://github.com/user-attachments/assets/b17ac063-8829-478c-9fc7-ae2e35dcf601
+https://drive.google.com/file/d/1Mkh6ioO0hgvJp-pWAigZOQXeWvlgCIgb/view?usp=drivesdk
 
 
 
