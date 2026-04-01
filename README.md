@@ -226,10 +226,12 @@ Analytics includes:
 
 
 ---
-
 ## 🎥 Demo Video
 
-(Add screen recording link here)
+https://github.com/user-attachments/assets/b17ac063-8829-478c-9fc7-ae2e35dcf601
+
+
+
 
 ---
 
