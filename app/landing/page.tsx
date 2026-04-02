@@ -72,7 +72,7 @@ export default function LandingPage() {
       </div>
 
       {/* ── NAV ── */}
-      <nav className="relative z-50 flex items-center justify-between px-6 md:px-10 py-5"
+<nav className="relative z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-5 gap-3"
         style={{ borderBottom: "1px solid rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", background: "rgba(8,12,20,0.7)" }}>
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center"
@@ -82,7 +82,7 @@ export default function LandingPage() {
           <span className="text-white font-bold text-lg tracking-tight">DealFlow<span className="text-indigo-400">.</span></span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/50">
+   <div className="flex flex-wrap items-center justify-center gap-3 text-[12px] font-medium text-white/50 md:flex-row">   
        {[
   { name: "Dashboard", path: "/dashboard" },
   { name: "Deals", path: "/deals" },
@@ -100,7 +100,7 @@ export default function LandingPage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="hidden md:block text-[13px] font-semibold text-white/60 hover:text-white transition-colors px-4 py-2">Sign In</button>
+           <button className="block text-[13px] font-semibold text-white/60 -white transition-colors px-4 py-2">Sign In</button>
           <button className="flex items-center gap-1.5 text-[13px] font-bold text-white px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105"
             style={{ background: "linear-gradient(135deg,#6366F1,#06B6D4)", boxShadow: "0 4px 20px rgba(99,102,241,0.4)" }}>
             Get Started <ArrowRight size={13} />
@@ -271,7 +271,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-[13px] text-white/60 leading-relaxed mb-5">"{text}"</p>
-                <div className="flex items-center gap-3">
+             <div className="flex items-center gap-3 justify-center">
                   <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-white"
                     style={{ background: "linear-gradient(135deg,rgba(99,102,241,0.5),rgba(6,182,212,0.5))" }}>
                     {name[0]}
