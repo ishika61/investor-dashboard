@@ -177,8 +177,8 @@ Analytics includes:
 ---
 
 ## 🌐 Live Demo
-👉https://profound-duckanoo-b387bd.netlify.app/landing
-> ⚠️ Note: Deployed on Netlify due to temporary Vercel server issue. Fully compatible with Vercel.
+👉https://investor-dashboard-3ffo.onrender.com/landing
+> ⚠️ Note: Deployed on Render due to temporary Vercel server issue. Fully compatible with Vercel.
 
 ---
 ## 📸 Screenshots
